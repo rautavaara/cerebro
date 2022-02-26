@@ -1,0 +1,326 @@
+
+**** 10/23/21 17:00:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sweep"  [ D:\Projects\CerebroSystem\Sim\LaserDriver-PSpiceFiles\SCHEMATIC1\sweep.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 5 .01 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LASERDRIVER
+X_U1         N00104 N00294 N00279 N00104 0 TLV62565
+V_V1         N00104 0 3.3
+C_C1         0 N00104  4.7u  TC=0,0 
+L_L1         N00279 N00283  4.4uH  
+R_R1         N00294 N00283  240k TC=0,0 
+R_R2         0 N00294  120k TC=0,0 
+C_C2         0 N00283  10u  TC=0,0 
+V_V2         N00605 0 5
+R_R3         N00605 N00294  1k TC=0,0 
+
+**** RESUMING sweep.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file nom_pspti.ind for library file nom_pspti.lib.
+
+INFO(ORPSIM-15422): Making new index file nom_pspti.ind for library file nom_pspti.lib.
+
+Index has 87558 entries from 4435 file(s).
+
+
+INFO(ORPSIM-15423): Unable to find index file nom.ind for library file nom.lib.
+
+INFO(ORPSIM-15422): Making new index file nom.ind for library file nom.lib.
+
+Index has 517 entries from 5 file(s).
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+ERROR -- Convergence problem in DC sweep
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00104)    3.3000 (N00279)     .0017 (N00283)    2.9607 (N00294)     .0122     
+
+(N00605)    0.0000 (X_U1.SET)     .5090                  (X_U1.SHDN)    0.0000  
+
+(X_U1.VREF)     .6070                 (X_U1.ZCRT)    0.0000                     
+
+(X_U1.NGATE) 646.0E-18                (X_U1.PGATE) 1.345E-15                    
+
+(X_U1.PGOOD)-25.10E-24                (X_U1.SKIPZ)    1.0000                    
+
+(X_U1.VCOMP)    1.8058                (X_U1.EN_CTL)    1.0000                   
+
+(X_U1.ISENSE)    -.0163               (X_U1.N10206)    1.0000                   
+
+(X_U1.SLEEPZ)    1.0000               (X_U1.TON_DB)    0.0000                   
+
+(X_U1.CLIM_HS)    0.0000              (X_U1.COMP_HI)    0.0000                  
+
+(X_U1.GATE_HS) 11.85E-15              (X_U1.GATE_LS)    3.3000                  
+
+(X_U1.STARTUP)    1.0715              (X_U1.UAMP_VGM) 349.1E-06                 
+
+(X_U1.GATE_HS_Z)    3.3000            (X_U1.N16632021)    0.0000                
+
+(X_U1.N16632085)     .6070            (X_U1.N16632231)    2.0000                
+
+(X_U1.N16632285)    1.0000            (X_U1.N16632387)     .0017                
+
+(X_U1.N16632395)     .0017            (X_U1.N16632569)    1.6509                
+
+(X_U1.N16632597)    1.0000            (X_U1.N16633217)    0.0000                
+
+(X_U1.N16633427) 3.591E-15            (X_U1.N16633495)    1.0000                
+
+(X_U1.N16633501)    1.0000            (X_U1.N16633823)     .3069                
+
+(X_U1.N166335592)     .7514           (X_U1.ULogic_ENB)    1.0000               
+
+(X_U1.U_PFM_C_HI)    0.0000           (X_U1.U_PFM_HYST)     .2000               
+
+(X_U1.X_U30.YINT)    1.0000           (X_U1.X_U31.YINT)    1.0000               
+
+(X_U1.X_U32.YINT)    0.0000           (X_U1.X_U33.YINT)    1.0000               
+
+(X_U1.X_U35.Yint)    0.0000           (X_U1.X_U59.YINT)    0.0000               
+
+(X_U1.X_U63.YINT)    0.0000           (X_U1.X_U64.YINT)    1.0000               
+
+(X_U1.UAMP_ISENSE)    -.0163          (X_U1.UAMP_N27558)    1.8058              
+
+(X_U1.UAMP_N27592)    1.8000          (X_U1.UAMP_N27640)     .0400              
+
+(X_U1.UAMP_N27738)    0.0000          (X_U1.UPG_N231875)     .2000              
+
+(X_U1.UU4_EN_CTL1)    3.3000          (X_U1.UU4_UVLO_TH)    2.2000              
+
+(X_U1.U_TonCAL_BB)     .1372          (X_U1.U_TonCAL_CC)     .2511              
+
+(X_U1.X_UU4_U68.1)    1.0000          (X_U1.UU4_UVLO_CTL)    1.0000             
+
+(X_U1.U_PFM_N06771)     .0450         (X_U1.U_TonCAL_NEG)     .3240             
+
+(X_U1.U_TonCAL_POS) 1.114E-09         (X_U1.U_TON_DET_AA)    2.9700             
+
+(X_U1.U_TON_DET_BB)    2.9040         (X_U1.X_COMP3.Yint)    1.0000             
+
+(X_U1.ULogic_N00753)    0.0000        (X_U1.ULogic_N00950)    1.0000            
+
+(X_U1.ULogic_N01041)    1.0000        (X_U1.ULogic_N01594) 3.218E-06            
+
+(X_U1.ULogic_N01736)    1.0000        (X_U1.ULogic_N02099)    1.0000            
+
+(X_U1.ULogic_N02134)    1.0000        (X_U1.ULogic_N02807)    0.0000            
+
+(X_U1.ULogic_N03081)    1.0000        (X_U1.ULogic_N07083)    0.0000            
+
+(X_U1.ULogic_N07289)     .4837        (X_U1.ULogic_N11607) 82.04E-12            
+
+(X_U1.ULogic_N11898)     .5163        (X_U1.UU4_N16573266)     .2000            
+
+(X_U1.UU4_N16573348)    3.3000        (X_U1.UU4_N16573614)    1.0000            
+
+(X_U1.U_TonCAL_S_BB)    1.0000        (X_U1.U_TonCAL_S_CC)    0.0000            
+
+(X_U1.X_U_PFM_U24.1)    0.0000        (X_U1.X_U_PFM_U39.1)    0.0000            
+
+(X_U1.X_U_PFM_U42.1)    0.0000        (X_U1.ULogic_U100_EN)     .0284           
+
+(X_U1.USTATRT_N00223)    1.0000       (X_U1.USTATRT_N01607)     .6070           
+
+(X_U1.X_UPG_U13.Yint)    0.0000       (X_U1.X_UU4_U56.YINT)    1.0000           
+
+(X_U1.X_UU4_U68.INM1)   -1.1000       (X_U1.X_UU4_U68.INP1)    0.0000           
+
+(X_U1.X_UU4_U68.INP2)     .2000       (X_U1.U_PFM_N16563015)    0.0000          
+
+(X_U1.U_PFM_N16563157)     .6125      (X_U1.U_PFM_N16569969)    1.0000          
+
+(X_U1.U_PFM_N16576437)     .4125      (X_U1.U_PFM_N16576469)     .2000          
+
+(X_U1.U_PFM_N16577607)    0.0000      (X_U1.U_PFM_N16588417)    0.0000          
+
+(X_U1.U_PFM_N16589789)    0.0000      (X_U1.U_TonCAL_N03102)     .2292          
+
+(X_U1.U_TonCAL_N03316)     .1372      (X_U1.U_TonCAL_N03514)     .3760          
+
+(X_U1.U_TonCAL_N03628)     .0011      (X_U1.U_TonCAL_N06132)    1.0000          
+
+(X_U1.U_TonCAL_N13940) 138.0E-15      (X_U1.U_TonCAL_N18238)    1.0000          
+
+(X_U1.U_TonCAL_N18324)     .3760      (X_U1.U_TonCAL_N22919)-2.301E-12          
+
+(X_U1.U_TonCAL_PGATEZ)    1.0000      (X_U1.X_UAMP_U22.YINT)    0.0000          
+
+(X_U1.U_TON_DET_N11224)     .3209     (X_U1.U_TON_DET_N16012)    2.9700         
+
+(X_U1.U_TON_DET_N16036)    2.9040     (X_U1.U_TON_DET_N19687) 825.0E-09         
+
+(X_U1.U_TON_DET_N25818)    2.9040     (X_U1.U_TON_DET_N26589)    2.9040         
+
+(X_U1.U_TON_DET_N27874)    0.0000     (X_U1.X_U_PFM_U14.Yint)    0.0000         
+
+(X_U1.X_U_PFM_U24.INM1)     .4003     (X_U1.X_U_PFM_U24.INP1)    0.0000         
+
+(X_U1.X_U_PFM_U24.INP2)    0.0000     (X_U1.X_U_PFM_U39.INM1)    1.0000         
+
+(X_U1.X_U_PFM_U39.INP1)    0.0000     (X_U1.X_U_PFM_U39.INP2)    0.0000         
+
+(X_U1.X_U_PFM_U42.INM1)     .6003     (X_U1.X_U_PFM_U42.INP1)    0.0000         
+
+(X_U1.X_U_PFM_U42.INP2)    0.0000     (X_U1.X_ULogic_U101.MY5)    1.0000        
+
+(X_U1.X_ULogic_U101.Qbr)    1.0000    (X_U1.X_ULogic_U101.Qqq)     .1724        
+
+(X_U1.X_ULogic_U19.YINT)    1.0000    (X_U1.X_ULogic_U20.YINT)    1.0000        
+
+(X_U1.X_ULogic_U22.YINT)    1.0000    (X_U1.X_ULogic_U23.YINT)    0.0000        
+
+(X_U1.X_ULogic_U24.YINT)    0.0000    (X_U1.X_ULogic_U25.YINT)    1.0000        
+
+(X_U1.X_ULogic_U26.YINT)    0.0000    (X_U1.X_ULogic_U55.YINT)    0.0000        
+
+(X_U1.X_ULogic_U65.YINT)    0.0000    (X_U1.X_ULogic_U67.YINT)    1.0000        
+
+(X_U1.X_ULogic_U68.YINT)    1.0000    (X_U1.X_ULogic_U69.YINT)    0.0000        
+
+(X_U1.X_ULogic_U70.YINT)    0.0000    (X_U1.X_ULogic_U71.YINT)    1.0000        
+
+(X_U1.X_ULogic_U73.YINT)    1.0000    (X_U1.ULogic_U100_N02118)    5.0000       
+
+(X_U1.ULogic_U100_N02122)    5.0000   (X_U1.ULogic_U100_N02277)    1.0051       
+
+(X_U1.ULogic_U100_N02439)     .5108   (X_U1.ULogic_U100_N02934)    1.0000       
+
+(X_U1.ULogic_U100_N03210)    0.0000   (X_U1.ULogic_U100_N04254)    1.0000       
+
+(X_U1.U_TonCAL_N16561305)     .1554   (X_U1.U_TonCAL_N16568074)    2.3000       
+
+(X_U1.U_TonCAL_N16578105) 48.34E-15   (X_U1.X_ULogic_U101.Qint)     .1724       
+
+(X_U1.ULogic_U100_N115931)    0.0000  (X_U1.X_ULogic_U101.MYVSS)    0.0000      
+
+(X_U1.X_ULogic_U101.Qqqd1) 1.989E-06  (X_U1.X_U_TonCAL_U14.Yint)    0.0000      
+
+(X_U1.X_U_TonCAL_U22.YINT)    1.0000  (X_U1.X_U_TonCAL_U23.YINT)    0.0000      
+
+(X_U1.X_U_TonCAL_U24.YINT)    1.0000  (X_U1.X_U_TonCAL_U25.YINT)    1.0000      
+
+(X_U1.X_U_TonCAL_U26.YINT)    0.0000  (X_U1.X_ULogic_U101.X3.YINT)    0.0000    
+
+(X_U1.X_ULogic_U100_U22.YINT)    0.0000                                         
+
+(X_U1.X_ULogic_U100_U23.YINT)    0.0000                                         
+
+(X_U1.X_ULogic_U100_U24.YINT)    1.0000                                         
+
+(X_U1.X_ULogic_U100_U25.YINT)    1.0000                                         
+
+(X_U1.X_ULogic_U100_U26.YINT)    0.0000                                         
+
+(X_U1.X_ULogic_U100_U27.YINT)    1.0000                                         
+
+(X_U1.X_ULogic_U100_U28.YINT)    1.0000                                         
+
+(X_U1.X_U_TON_DET_U35.N00153)    2.9040                                         
+
+(X_U1.X_U_TON_DET_U35.N00234)    2.9040                                         
+
+(X_U1.X_U_TON_DET_U35.X_U1.Yint)    0.0000               
+
+
+  These voltages failed to converge:
+
+    V(N00279)                 =   677.78mV  \    1.711mV
+    V(N00283)                 =   677.78mV  \     2.961V
+    V(N00294)                 =    2.789mV  \    12.18mV
+    V(X_U1.U_TonCAL_N03514)   =   876.15mV  \   376.02mV
+    V(X_U1.U_TonCAL_POS)      =   234.69mV  \    1.114nV
+    V(X_U1.U_TonCAL_BB)       =   300.83mV  \   137.17mV
+    V(X_U1.U_TonCAL_CC)       =   575.32mV  \   251.12mV
+    V(X_U1.N16633823)         =         0V  \   306.91mV
+    V(X_U1.U_TonCAL_N03102)   =   522.53mV  \   229.21mV
+    V(X_U1.U_TonCAL_N03316)   =   300.83mV  \   137.17mV
+    V(X_U1.U_TonCAL_N16561305) =         0V  \   155.37mV
+    V(X_U1.U_TonCAL_NEG)      =   300.83mV  \   323.99mV
+    V(X_U1.U_TonCAL_N03628)   =   523.25mV  \    1.114mV
+    V(X_U1.U_TonCAL_N18324)   =   876.15mV  \   376.02mV
+    V(X_U1.SET)               =     1.000V  \   508.97mV
+    V(X_U1.N166335592)        =     1.000V  \   751.42mV
+    V(X_U1.UAMP_ISENSE)       =    2.704uV  \   -16.29mV
+    V(X_U1.ISENSE)            =    2.704uV  \   -16.29mV
+    V(X_U1.U_TON_DET_N11224)  =     3.300V  \   320.92mV
+    V(X_U1.N16632387)         =   677.78mV  \    1.711mV
+    V(X_U1.ULogic_U100_N02439) =     1.100V  \   510.76mV
+    V(X_U1.ULogic_U100_N02277) =     1.068V  \     1.005V
+    V(X_U1.ULogic_N07289)     =         0V  \   483.73mV
+    V(X_U1.ULogic_U100_EN)    =     1.000V  \    28.37mV
+    V(X_U1.ULogic_N11898)     =     1.000V  \   516.27mV
+    V(X_U1.ULogic_N01594)     =         0V  \    3.218uV
+    V(X_U1.X_ULogic_U101.Qint) =    4.985GV  \   172.39mV
+    V(X_U1.X_ULogic_U101.Qqq) =    4.985GV  \   172.39mV
+    V(X_U1.X_ULogic_U101.Qqqd1) =         0V  \    1.989uV
+    V(X_U1.N16632569)         =     1.989V  \     1.651V
+    V(X_U1.N16632395)         =   360.30mV  \    1.711mV
+    V(X_U1.X_U_PFM_U24.INM1)  =   409.67mV  \   400.28mV
+    V(X_U1.X_U_PFM_U42.INM1)  =   609.67mV  \   600.28mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.X_ULogic_U100_U28.E_ABMGATE) =    12.13uA  \    3.503uA
+    I(X_U1.X_ULogic_U100_U24.E_ABMGATE) =   -2.002nA  \  -971.63mA
+    I(X_U1.X_ULogic_U73.E_ABMGATE) =         0A  \  -483.73mA
+    I(X_U1.X_ULogic_U24.E_ABMGATE) =         0A  \   483.73mA
+    I(X_U1.X_ULogic_U70.E_ABMGATE) =         0A  \    82.04pA
+    I(X_U1.X_ULogic_U68.E_ABMGATE) =         0A  \   -44.95pA
+    I(X_U1.X_U_TonCAL_U14.E_ABM) =         0A  \   155.37mA
+    I(X_U1.X_U61.E_MULT)      =         0A  \  -744.77nA
+    I(X_U1.X_U64.E_ABMGATE)   =         0A  \  -248.58mA
+    I(X_U1.X_ULogic_U101.X3.E_ABMGATE) =         0A  \    1.989uA
+    I(L_L1)                   =    2.813uA  \   -16.29mA
+    I(V_V1)                   =   -4.758uA  \   -5.028uA
+    I(V_V2)                   =    2.789uA  \    12.18uA
+    I(X_U1.V_ULogic_U100_V9)  =   -13.23uA  \   -4.128uA
+    I(X_U1.V_USTATRT_V1)      =   -1.072uA  \   -1.065uA
+    I(X_U1.X_ULogic_U101.V1)  =    4.985mA  \  -778.61fA
+    I(X_U1.X_ULogic_U101.V2)  =    4.985mA  \   223.39fA
+    I(X_U1.X_H3.VH_H3)        =    2.704uA  \   -16.29mA
+
+  These devices failed to converge:
+    X_U1.X_ULogic_U101.D_D10 X_U1.X_ULogic_U101.X3.E_ABMGATE 
+    X_U1.X_U_TON_DET_U35.X_U1.E_ABM 
+
+**** Interrupt ****
